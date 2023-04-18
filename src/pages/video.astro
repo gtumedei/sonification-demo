@@ -12,15 +12,15 @@ import IconArrowRight from "~icons/mdi/arrow-right"
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur unde esse nulla deleniti laboriosam laudantium accusamus quia et voluptatem magnam!
       </p>
       <h2>1° Video</h2>
-      <video controls class="w-full rounded-xl">
+      <video controls muted class="w-full rounded-xl">
         <source src="/video/video-track.mp4" type="video/mp4">
       </video>
       <h2>2° Video</h2>
-      <video controls class="w-full rounded-xl">
+      <video controls muted class="w-full rounded-xl">
         <source src="/video/video-track.mp4" type="video/mp4">
       </video>
       <h2>3° Video</h2>
-      <video controls class="w-full rounded-xl">
+      <video controls muted class="w-full rounded-xl">
         <source src="/video/video-track.mp4" type="video/mp4">
       </video>
     </div>
@@ -34,3 +34,10 @@ import IconArrowRight from "~icons/mdi/arrow-right"
     </div>
   </main>
 </DefaultLayout>
+
+<style>
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-mute-button {
+  display: none;
+}
+</style>
