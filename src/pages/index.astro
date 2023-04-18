@@ -1,7 +1,73 @@
 ---
 import DefaultLayout from "~/layouts/default.astro"
+import IconArrowRight from "~icons/mdi/arrow-right"
 ---
 
 <DefaultLayout title="Sonification demo">
-	<h1>Astro</h1>
+  <main class="container grid grid-cols-1 lg:grid-cols-2 gap-24 px-6 py-12 lg:my-auto">
+    <div class="flex">
+      <div class="prose max-w-full my-auto">
+        <h1>Sonification Demo</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim commodi nulla, eos modi fugit fuga beatae ipsam velit,
+          inventore culpa quidem possimus minima distinctio, facilis in explicabo! Harum voluptates in, minima quidem rerum
+          accusantium! Excepturi, adipisci. Commodi voluptas cupiditate quod, harum perferendis tempora possimus sint, odio
+          provident voluptates quaerat reiciendis!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim commodi nulla, eos modi fugit fuga beatae ipsam velit,
+          inventore culpa quidem possimus minima distinctio, facilis in explicabo! Harum voluptates in, minima quidem rerum
+          accusantium! Excepturi, adipisci. Commodi voluptas cupiditate quod, harum perferendis tempora possimus sint, odio
+          provident voluptates quaerat reiciendis!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim commodi nulla, eos modi fugit fuga beatae ipsam velit,
+          inventore culpa quidem possimus minima distinctio, facilis in explicabo! Harum voluptates in, minima quidem rerum
+          accusantium! Excepturi, adipisci. Commodi voluptas cupiditate quod, harum perferendis tempora possimus sint, odio
+          provident voluptates quaerat reiciendis!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim commodi nulla, eos modi fugit fuga beatae ipsam velit,
+          inventore culpa quidem possimus minima distinctio, facilis in explicabo! Harum voluptates in, minima quidem rerum
+          accusantium! Excepturi, adipisci. Commodi voluptas cupiditate quod, harum perferendis tempora possimus sint, odio
+          provident voluptates quaerat reiciendis!
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center gap-12">
+      <div>
+        <div class="prose max-w-full mb-6">
+          <h2 class="mb-2">Audio</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id modi minima autem ab repudiandae beatae cumque officia deserunt aliquam dolorem.
+          </p>
+        </div>
+        <a href="/audio" class="inline-flex items-center gap-4 p-4 rounded-full font-bold bg-[#F1F3F4] hover:underline">
+          <span class="ml-2">Vai alla demo</span> <IconArrowRight />
+        </a>
+      </div>
+      <div>
+        <div class="prose max-w-full mb-6">
+          <h2 class="mb-2">Video</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id modi minima autem ab repudiandae beatae cumque officia deserunt aliquam dolorem.
+          </p>
+        </div>
+        <a href="/video" class="inline-flex items-center gap-4 p-4 rounded-full font-bold bg-[#F1F3F4] hover:underline">
+          <span class="ml-2">Vai alla demo</span> <IconArrowRight />
+        </a>
+      </div>
+      <div>
+        <div class="prose max-w-full mb-6">
+          <h2 class="mb-2">Audio + Video</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id modi minima autem ab repudiandae beatae cumque officia deserunt aliquam dolorem.
+          </p>
+        </div>
+        <a href="/both" class="inline-flex items-center gap-4 p-4 rounded-full font-bold bg-[#F1F3F4] hover:underline">
+          <span class="ml-2">Vai alla demo</span> <IconArrowRight />
+        </a>
+      </div>
+    </div>
+  </main>
 </DefaultLayout>

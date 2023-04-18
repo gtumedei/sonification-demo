@@ -1,7 +1,36 @@
 ---
 import DefaultLayout from "~/layouts/default.astro"
+import IconArrowLeft from "~icons/mdi/arrow-left"
+import IconArrowRight from "~icons/mdi/arrow-right"
 ---
 
 <DefaultLayout title="Audio + Video | Sonification demo">
-	<h1>Audio + Video</h1>
+  <main class="container max-w-3xl flex flex-col px-6 py-12">
+    <div class="grow prose max-w-full">
+      <h1>Sonification Demo - Audio + Video</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur unde esse nulla deleniti laboriosam laudantium accusamus quia et voluptatem magnam!
+      </p>
+      <h2>1° Video</h2>
+      <video controls class="w-full rounded-xl">
+        <source src="/video/video-track.mp4" type="video/mp4">
+      </video>
+      <h2>2° Video</h2>
+      <video controls class="w-full rounded-xl">
+        <source src="/video/video-track.mp4" type="video/mp4">
+      </video>
+      <h2>3° Video</h2>
+      <video controls class="w-full rounded-xl">
+        <source src="/video/video-track.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="flex justify-between mt-24">
+      <a href="/" class="inline-flex items-center gap-4 p-4 rounded-full font-bold bg-[#F1F3F4] hover:underline">
+        <IconArrowLeft /> <span class="mr-2">Torna alla home</span>
+      </a>
+      <a href="#" class="inline-flex items-center gap-4 p-4 rounded-full font-bold bg-[#F1F3F4] hover:underline">
+        <span class="ml-2">Vai al sondaggio</span> <IconArrowRight />
+      </a>
+    </div>
+  </main>
 </DefaultLayout>
