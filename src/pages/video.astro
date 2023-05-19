@@ -20,10 +20,7 @@ import IconArrowRight from "~icons/mdi/arrow-right"
           <div>
             <h2>Video {item.code}</h2>
             <video controls class="w-full rounded-xl border border-gray-300">
-              <source
-                src={`https://github.com/gtumedei/sonification-demo/releases/download/v0.0.0/video-${item.code}.mp4`}
-                type="video/mp4"
-              />
+              <source src={`/res/video-${item.code}.mp4`} type="video/mp4" />
             </video>
           </div>
         ))
