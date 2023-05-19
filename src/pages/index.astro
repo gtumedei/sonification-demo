@@ -3,66 +3,43 @@ import DefaultLayout from "~/layouts/default.astro"
 import IconArrowRight from "~icons/mdi/arrow-right"
 ---
 
-<DefaultLayout title="Sonification demo">
-  <main class="container grid grid-cols-1 lg:grid-cols-2 gap-24 px-6 py-12 lg:my-auto">
-    <div class="flex">
-      <div class="prose max-w-full my-auto">
-        <h1>Sonification Demo</h1>
+<DefaultLayout title="Data Visualization e Sonification sulla Qualità dell'Aria">
+  <main class="container grow max-w-3xl flex flex-col px-6 py-12">
+    <div class="grow flex">
+      <div class="prose max-w-full m-auto">
+        <h1>Data Visualization e Sonification sulla Qualità dell'Aria</h1>
         <p>
           La <strong>sonificazione</strong> è il processo tramite il quale un dato di qualsiasi natura viene trasformato
           in un suono che ne rispecchia le caratteristiche, in modo da facilitarne la comunicazione e l'interpretazione.
         </p>
         <p>
-          Questa demo utilizza tre metodologie di comunicazione per fornire dati relativi all'andamento giornaliero
-          dell'inquinamento atmosferico in alcune località in giro per il mondo.
+          Questa demo utilizza due metodologie di comunicazione per fornire dati relativi all'andamento giornaliero
+          dell'inquinamento atmosferico in cinque città in giro per il mondo.
         </p>
         <ul>
-          <li>La prima modalità consiste nel consultare un grafico a barre animato</li>
-          <li>La seconda prevede l'ascolto di una rappresentazione sonora dei dati tramite sonificazione</li>
-          <li>La terza combina le due modalità precedenti</li>
+          <li>
+            La prima modalità consiste nell'ascolto di una rappresentazione sonora dei dati, ottenuta tramite
+            sonificazione
+          </li>
+          <li>La seconda prevede la consultazione di un grafico a barre animato</li>
         </ul>
         <p>
-          I dati visualizzati seguono la formula <strong>AQI</strong> (<strong>Air Quality Index</strong>), un indice che
-          valuta la qualità dell'aria in base ad un numero compreso tra 0 (ottimo) e 500 (altamente inquinato).
-          In aggiunta all'andamento dell'AQI, viene mostrato il residuo, che indica come giornate particolarmente inquinate
-          influenzino anche l'inquinamento nelle giornate successive.
+          I dati visualizzati seguono la formula <strong>AQI</strong> (<strong>Air Quality Index</strong>), un indice
+          che valuta la qualità dell'aria in base ad un numero compreso tra 0 (ottimo) e 500 (altamente inquinato). In
+          aggiunta all'andamento dell'AQI, viene mostrato il residuo, che indica come giornate particolarmente inquinate
+          influenzino la qualità dell'aria anche nelle giornate successive.
         </p>
+        <p>Terminata la demo ti verrà richiesto di completare un breve questionario.</p>
       </div>
     </div>
-    <div class="flex flex-col justify-center gap-12">
-      <div>
-        <div class="prose max-w-full mb-6">
-          <h2 class="mb-2">Audio</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id modi minima autem ab repudiandae beatae cumque officia deserunt aliquam dolorem.
-          </p>
-        </div>
-        <a href="/audio" class="inline-flex items-center gap-4 p-4 rounded-full font-bold bg-[#F1F3F4] border border-gray-300 hover:underline">
-          <span class="ml-2">Vai alla demo</span> <IconArrowRight />
-        </a>
-      </div>
-      <div>
-        <div class="prose max-w-full mb-6">
-          <h2 class="mb-2">Video</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id modi minima autem ab repudiandae beatae cumque officia deserunt aliquam dolorem.
-          </p>
-        </div>
-        <a href="/video" class="inline-flex items-center gap-4 p-4 rounded-full font-bold bg-[#F1F3F4] border border-gray-300 hover:underline">
-          <span class="ml-2">Vai alla demo</span> <IconArrowRight />
-        </a>
-      </div>
-      <div>
-        <div class="prose max-w-full mb-6">
-          <h2 class="mb-2">Audio + Video</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id modi minima autem ab repudiandae beatae cumque officia deserunt aliquam dolorem.
-          </p>
-        </div>
-        <a href="/both" class="inline-flex items-center gap-4 p-4 rounded-full font-bold bg-[#F1F3F4] border border-gray-300 hover:underline">
-          <span class="ml-2">Vai alla demo</span> <IconArrowRight />
-        </a>
-      </div>
+    <div class="flex mt-24">
+      <a
+        href="/audio"
+        class="w-full sm:w-1/2 inline-flex justify-center items-center gap-4 p-4 rounded-full font-bold bg-teal-200 border border-teal-400 hover:underline mx-auto"
+      >
+        <span class="ml-2">Inizia</span>
+        <IconArrowRight />
+      </a>
     </div>
   </main>
 </DefaultLayout>

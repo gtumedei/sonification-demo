@@ -4,12 +4,8 @@ import icons from "unplugin-icons/vite"
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind()
-  ],
+  integrations: [tailwind()],
   vite: {
-    plugins: [
-      icons({ compiler: "astro" })
-    ]
-  }
+    plugins: [icons({ compiler: "astro" })],
+  },
 })

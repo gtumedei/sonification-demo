@@ -1,40 +1,57 @@
 ---
-import { cities } from "~/cities"
+import { videos } from "~/cities"
 import DefaultLayout from "~/layouts/default.astro"
 import IconArrowLeft from "~icons/mdi/arrow-left"
 import IconArrowRight from "~icons/mdi/arrow-right"
 ---
 
-<DefaultLayout title="Video | Sonification demo">
+<DefaultLayout title="Data Visualization e Sonification sulla Qualità dell'Aria">
   <main class="container max-w-3xl flex flex-col px-6 py-12">
     <div class="grow prose max-w-full">
-      <h1>Sonification Demo - Video</h1>
+      <h1>Seconda parte - Data Visualization</h1>
+      <p>Guarda i cinque video, quindi termina la demo con la compilazione del questionario.</p>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur unde esse nulla deleniti laboriosam laudantium accusamus quia et voluptatem magnam!
+        <strong>Attenzione!</strong> I dati mostrati sono relativi alle stesse cinque città della sezione precedente, ma
+        l'ordine non è lo stesso. Ad esempio, l'<strong>audio 1</strong> e il <strong>video A</strong> non fanno necessariamente
+        riferimento alla medesima località.
       </p>
-      {cities.map((city, i) =>
-        <div>
-          <h2>{i + 1}° Video - {city.name}</h2>
-          <video controls class="w-full rounded-xl border border-gray-300">
-            <source src={`https://github.com/gtumedei/sonification-demo/releases/download/v0.0.0/video-${city.code}.mp4`} type="video/mp4" />
-          </video>
-        </div>
-      )}
+      {
+        videos.map((item) => (
+          <div>
+            <h2>Video {item.code}</h2>
+            <video controls class="w-full rounded-xl border border-gray-300">
+              <source
+                src={`https://github.com/gtumedei/sonification-demo/releases/download/v0.0.0/video-${item.code}.mp4`}
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        ))
+      }
     </div>
-    <div class="grid grid-cols-1 sm:flex sm:justify-between gap-6 mt-24">
-      <a href="#" class="inline-flex justify-center items-center gap-4 p-4 rounded-full font-bold bg-teal-300 border border-teal-500 hover:underline sm:order-2">
-        <span class="ml-2">Vai al sondaggio</span> <IconArrowRight />
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-24">
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdYELMj1KqJB0GntKm30rcDAe_a68Il7wNquD6DNhmlLoUamQ/viewform?usp=sf_link"
+        class="inline-flex justify-center items-center gap-4 p-4 rounded-full font-bold bg-teal-200 border border-teal-400 hover:underline sm:order-2"
+        target="_blank"
+      >
+        <span class="ml-2">Vai al questionario</span>
+        <IconArrowRight />
       </a>
-      <a href="/" class="inline-flex justify-center items-center gap-4 p-4 rounded-full font-bold bg-[#F1F3F4] border border-gray-300 hover:underline sm:order-1">
-        <IconArrowLeft /> <span class="mr-2">Torna alla home</span>
+      <a
+        href="/audio"
+        class="inline-flex justify-center items-center gap-4 p-4 rounded-full font-bold bg-[#F1F3F4] border border-gray-300 hover:underline sm:order-1"
+      >
+        <IconArrowLeft />
+        <span class="mr-2">Torna agli audio</span>
       </a>
     </div>
   </main>
 </DefaultLayout>
 
 <style>
-video::-webkit-media-controls-volume-slider,
-video::-webkit-media-controls-mute-button {
-  display: none;
-}
+  video::-webkit-media-controls-volume-slider,
+  video::-webkit-media-controls-mute-button {
+    display: none;
+  }
 </style>

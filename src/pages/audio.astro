@@ -1,32 +1,43 @@
 ---
-import { cities } from "~/cities"
+import { audios } from "~/cities"
 import DefaultLayout from "~/layouts/default.astro"
 import IconArrowLeft from "~icons/mdi/arrow-left"
 import IconArrowRight from "~icons/mdi/arrow-right"
 ---
 
-<DefaultLayout title="Audio | Sonification demo">
+<DefaultLayout title="Data Visualization e Sonification sulla Qualità dell'Aria">
   <main class="container grow max-w-3xl flex flex-col px-6 py-12">
     <div class="grow prose max-w-full">
-      <h1>Sonification Demo - Audio</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur unde esse nulla deleniti laboriosam laudantium accusamus quia et voluptatem magnam!
-      </p>
-      {cities.map((city, i) =>
-        <div>
-          <h2>{i + 1}° Audio - {city.name}</h2>
-          <audio controls class="w-full rounded-full border border-gray-300">
-            <source src={`https://github.com/gtumedei/sonification-demo/releases/download/v0.0.0/audio-${city.code}.mp3`} type="audio/mpeg" />
-          </audio>
-        </div>
-      )}
+      <h1>Prima parte - Sonification</h1>
+      <p>Ascolta i cinque audio, quindi prosegui alla seconda parte utilizzando il tasto a fondo pagina.</p>
+      {
+        audios.map((item) => (
+          <div>
+            <h2>Audio {item.code}</h2>
+            <audio controls class="w-full rounded-full border border-gray-300">
+              <source
+                src={`https://github.com/gtumedei/sonification-demo/releases/download/v0.0.0/audio-${item.code}.mp3`}
+                type="audio/mpeg"
+              />
+            </audio>
+          </div>
+        ))
+      }
     </div>
-    <div class="grid grid-cols-1 sm:flex sm:justify-between gap-6 mt-24">
-      <a href="#" class="inline-flex justify-center items-center gap-4 p-4 rounded-full font-bold bg-teal-300 border border-teal-500 hover:underline sm:order-2">
-        <span class="ml-2">Vai al sondaggio</span> <IconArrowRight />
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-24">
+      <a
+        href="/video"
+        class="inline-flex justify-center items-center gap-4 p-4 rounded-full font-bold bg-teal-200 border border-teal-400 hover:underline sm:order-2"
+      >
+        <span class="ml-2">Vai ai video</span>
+        <IconArrowRight />
       </a>
-      <a href="/" class="inline-flex justify-center items-center gap-4 p-4 rounded-full font-bold bg-[#F1F3F4] border border-gray-300 hover:underline sm:order-1">
-        <IconArrowLeft /> <span class="mr-2">Torna alla home</span>
+      <a
+        href="/"
+        class="inline-flex justify-center items-center gap-4 p-4 rounded-full font-bold bg-[#F1F3F4] border border-gray-300 hover:underline sm:order-1"
+      >
+        <IconArrowLeft />
+        <span class="mr-2">Torna alla home</span>
       </a>
     </div>
   </main>
