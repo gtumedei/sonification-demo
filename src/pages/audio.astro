@@ -38,4 +38,10 @@ import IconArrowRight from "~icons/mdi/arrow-right"
       </a>
     </div>
   </main>
+  <script lang="ts">
+    document.querySelector("audio").addEventListener("ratechange", (e) => {
+      e.preventDefault()
+      e.target.playbackRate = 1
+    })
+  </script>
 </DefaultLayout>
